@@ -1,0 +1,219 @@
+<!--
+  File: index.html
+  Author: CS100 Team
+  Date Created: 23 July 2023
+  Copyright: CSTU
+  Description: HTML code of CSTU Passport that validate with JS
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  <title>Forms - CSTU Passport</title>
+  <link rel="stylesheet" href="css/styleform.css">
+</head>
+<body>
+  <div class="backgroundmain">
+    <h1>My Activity</h1>
+    <h3>โปรดกรอกกิจกรรมที่ได้ทำลงไปให้ครบถ้วนและถูกต้อง</h3>
+  <!-- Form Container -->
+  <div class="form-container">
+    <!-- Main Form -->
+    <form id="myForm" action="#" method="post">
+
+      <!-- Firstname and Lastname Field -->
+      <div class="form-group">
+        <label for="fullname">ชื่อ-นามสกุล</label>
+        <input type="text" id="fullname" name="fullname" />
+        <small>โปรดใส่ชื่อ-นามสกุล ตามฟอร์แมต ชื่อจริงและนามสกุลโดยเว้นวรรค 1 ช่อง</small>
+        <span id="fullnameError" class="error"></span>
+      </div>
+      
+      <!-- Student ID Field -->
+      <div class="form-group">
+        <label for="studentID">รหัสนักศึกษา</label>
+        <input type="text" id="studentID" name="studentID" />
+        <small>โปรดใส่รหัสนักศึกษา 10 หลัก</small>
+        <span id="studentIDError" class="error"></span>
+      </div>
+      
+      <!-- University Email Field -->
+      <div class="form-group">
+        <label for="email">อีเมลนักศึกษา</label>
+        <input type="email" id="email" name="email" />
+        <small>โปรดใส่อีเมลนักศึกษาของคุณ ที่ลงท้ายด้วย "@dome.tu.ac.th"</small>
+        <span id="emailError" class="error"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="studentID">เบอร์โทรศัพท์</label>
+        <input type="text" id="phoneNum" name="phoneNum" />
+        <small>โปรดใส่เบอร์โทรศัพท์ของคุณ</small>
+        <span id="phoneError" class="error"></span>
+      </div>
+
+      <!-- Work/Activity Title Field -->
+      <div class="form-group">
+        <label for="workTitle">กิจกรรม/งานที่ได้ทำ</label>
+        <input type="text" id="workTitle" name="workTitle" />
+        <span id="workError" class="error"></span>
+      </div>
+
+      <!-- Type of Work/Activity Field -->
+      <div class="form-group">
+        <label for="activityType">ชนิดของกิจกรรม/งาน</label>
+        <select id="activityType" name="activityType">
+          <option value="" disabled selected>โปรดเลือก</option>
+          <option value="Course">เกี่ยวกับวิชา</option>
+          <option value="Activity">กิจกรรมในมอ</option>
+          <option value="Work">งาน</option>
+          <option value="Research">การค้นวิจัย</option>
+          <option value="Sports">กีฬา</option>
+          <option value="Competition">การแข่งขัน</option>
+          <option value="Computer Science">Computer Science</option>
+        </select>
+      </div>
+      <!-- <div class="form-group">
+        <label for="activityType">Type of Work/Activity</label>
+        <select id="activityType" name="activityType">
+          <option value="" disabled selected>Select an option</option>
+          <option value="Course">Course</option>
+          <option value="Activity">Activity</option>
+          <option value="Work">Work</option>
+          <option value="Research">Research</option>
+          <option value="Sports">Sports</option>
+          <option value="Competition">Competition</option>
+          <option value="Computer Science">Computer Science</option>
+        </select>
+      </div> -->
+
+      <!-- Academic Year Field -->
+      <div class="form-group">
+        <label for="academicYear">ปีการศึกษา</label>
+        <select id="academicYear" name="academicYear">
+          <option value="" disabled selected>โปรดเลือก</option>
+          <option value="2561">2561</option>
+          <option value="2562">2562</option>
+          <option value="2563">2563</option>
+          <option value="2564">2564</option>
+          <option value="2565">2565</option>
+          <option value="2566">2566</option>
+          <option value="2567">2567</option>
+          <option value="2568">2568</option>
+          <option value="2569">2569</option>
+        </select>
+      </div>
+
+      <!-- Semester Field -->
+      <div class="form-group">
+        <label for="semester">เทอม/ภาคการศึกษา</label>
+        <select id="semester" name="semester">
+          <option value="" disabled selected>โปรดเลือก</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="Summer">Summer</option>
+        </select>
+      </div>
+
+      <!-- Start Date/Time Field -->
+      <div class="form-group">
+        <label for="startDate">วัน/เวลาที่เริ่มทำกิจกรรม</label>
+        <input type="datetime-local" id="startDate" name="startDate" />
+      </div>
+
+      <!-- End Date/Time Field -->
+      <div class="form-group">
+        <label for="endDate">วัน/เวลาที่สิ้นสุดกิจกรรม</label>
+        <input type="datetime-local" id="endDate" name="endDate" />
+      </div>
+
+      <!-- Location Field -->
+      <div class="form-group">
+        <label for="location">บริเวณที่ทำกิจกรรม</label>
+        <input type="text" id="location" name="location" />
+      </div>
+
+      <!-- Description Field -->
+      <div class="form-group">
+        <label for="description">บรรยายรายละเอียดเพิ่มเติม (ไม่บังคับ)</label>
+        <textarea id="description" name="description" rows="4"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="description">อัพโหลดรูปกิจกรรม</label>
+        <input type="file" id="filetag" accept="image/jpeg, image/png, image/jpg">
+        <img src="" width="300px" height="200px" id="preview">
+      </div>
+
+      <!-- Submit Button -->
+      <div class="form-group">
+        <input type="submit" value="Submit" onclick="displaydata()"/>
+        <span id="allerror" class="error"></span>
+      </div>
+    </form>
+  </div>
+
+  <!--display result-->
+  <div class="DisplayResult">
+    <h2>Previous Activity</h2>
+    <table style="border : 2px solid black">
+      <tr id="addnexttext">
+        <td>No.</td>
+        <td>Name</td>
+        <td>Student ID</td>
+        <td>Dome Email</td>
+        <td>Work/Activity</td>
+        <td>Type Of Work/Activity</td>
+        <td>Semester/A.year</td>
+        <td>Location</td>
+      </tr>
+
+    </table>
+  </div>
+
+  
+<div class="DisplayActivity">
+
+  <h1>My Previous Activity</h1>
+  <table>
+
+    <div id="ActNext">
+      <tr id="style2">
+          <td colspan="3">
+              <h2>Activity n : งาน123456789</h2>
+          </td>
+      </tr>
+      <tr id="style2">
+          <td>
+              <h3>ภาพกิจกรรม</h3>
+              <img src="" width="400vh" height="300vh" id="style3" />
+          </td>
+          <td width="600vh">
+              <h2>ชื่อคนที่ทำกิจกรรม : </h2>
+              <h3>รหัสนักศึกษา : </h3>
+              <h3>อีเมลล์ : </h3>
+              <h3>อยู่ปีการศึกษา : </h3>
+              <h3>เบอร์โทรศัพท์ : </h3>
+              <br>
+              <h3>ชนิดกิจกรรม : </h3>
+              <h3>วันเริ่ม-จบกิจกรรม : </h3>
+              <h3>สถานที่ทำกิจกรรม : </h3>
+              <h3>รายละเอียดกิจกรรมเพิ่มเติม : </h3>
+          </td>
+      </tr>
+    </div>
+
+  </table>
+</div>
+
+<div id="test1.2"><p>What</p></div>
+
+
+</div>
+  <!-- JavaScript -->
+  <script src="scriptform.js"></script>
+</body>
+</html>
