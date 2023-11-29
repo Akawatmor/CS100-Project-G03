@@ -75,6 +75,7 @@
           <option value="Competition">การแข่งขัน</option>
           <option value="Computer Science">Computer Science</option>
         </select>
+        <span id="workTypeError" class="error"></span>
       </div>
       <!-- <div class="form-group">
         <label for="activityType">Type of Work/Activity</label>
@@ -105,6 +106,7 @@
           <option value="2568">2568</option>
           <option value="2569">2569</option>
         </select>
+        <span id="aYearError" class="error"></span>
       </div>
 
       <!-- Semester Field -->
@@ -116,9 +118,12 @@
           <option value="2">2</option>
           <option value="Summer">Summer</option>
         </select>
+        <span id="semesterError" class="error"></span>
       </div>
 
       <!-- Start Date/Time Field -->
+
+      <fieldset>
       <div class="form-group">
         <label for="startDate">วัน/เวลาที่เริ่มทำกิจกรรม</label>
         <input type="datetime-local" id="startDate" name="startDate" />
@@ -129,11 +134,15 @@
         <label for="endDate">วัน/เวลาที่สิ้นสุดกิจกรรม</label>
         <input type="datetime-local" id="endDate" name="endDate" />
       </div>
+      </fieldset>
+      <span id="dateError" class="error"></span>
+      <br>
 
       <!-- Location Field -->
       <div class="form-group">
         <label for="location">บริเวณที่ทำกิจกรรม</label>
         <input type="text" id="location" name="location" />
+        <span id="locationError" class="error"></span>
       </div>
 
       <!-- Description Field -->
@@ -151,28 +160,11 @@
       <!-- Submit Button -->
       <div class="form-group">
         <input type="submit" value="Submit" onclick="displaydata()"/>
-        <span id="allerror" class="error"></span>
+        <span id="allError" class="error"></span>
       </div>
     </form>
   </div>
 
-  <!--display result-->
-  <div class="DisplayResult">
-    <h2>Previous Activity</h2>
-    <table style="border : 2px solid black">
-      <tr id="addnexttext">
-        <td>No.</td>
-        <td>Name</td>
-        <td>Student ID</td>
-        <td>Dome Email</td>
-        <td>Work/Activity</td>
-        <td>Type Of Work/Activity</td>
-        <td>Semester/A.year</td>
-        <td>Location</td>
-      </tr>
-
-    </table>
-  </div>
 
   
 <div class="DisplayActivity">
@@ -209,7 +201,6 @@
   </table>
 </div>
 
-<div id="test1.2"><p>What</p></div>
 
 
 </div>
