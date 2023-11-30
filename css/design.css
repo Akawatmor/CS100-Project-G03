@@ -23,8 +23,8 @@ body {
 .banner ::after {
     width: 100%;
     height: 100%;
-    background-image: url();
-    filter: brightness();
+    background-image: url('https://images.pexels.com/photos/697243/pexels-photo-697243.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+    filter: brightness(40%);
     background-size: cover;
 }
 
