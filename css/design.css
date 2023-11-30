@@ -257,7 +257,7 @@ body {
     padding-top: 2%;
 }
 
-.contact_img {
+.contact_img a img{
     width: 10%;
     height: 10%;
 }
