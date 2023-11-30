@@ -258,5 +258,6 @@ body {
 }
 
 .contact_img {
-    size: 0.4;
+    width: 10%;
+    height: 10%;
 }
