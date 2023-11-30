@@ -1,0 +1,289 @@
+*{
+    box-sizing: border-box;
+    border:none;
+    margin: 0;
+    padding: 0;
+    font-family: 'IBM Plex Sans Thai', sans-serif;
+
+}
+
+@media  screen and (max-width: 930px) and (min-width:570px) {
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+    
+    /* BANNER */
+
+    body {
+        background-color: pink;
+    }
+    .banner {
+        width:100% ;
+        height: 100vh;
+        background-color: aquamarine;
+        
+    }
+
+    .banner ::after {
+        width: 100%;
+        height: 100%;
+        background-image: url();
+        filter: brightness();
+        background-size: cover;
+    }
+
+    .nav {
+        position: relative;
+        width: 100%;
+        height: 5vh;
+        display: flex;
+        justify-content: space-between;
+        background-color: indigo;
+        align-items: center;
+    }
+
+    .logo {
+        position: absolute;
+        font-size: 1.3rem;
+        color: white;
+        left: 3%;
+    }
+
+    .nav ul{
+        display: none;
+        position: absolute;
+        right: 3%;
+        list-style: none;
+        gap: 1rem;
+        color: aliceblue;
+    }
+
+    .nav_phone {
+        display: none;
+    }
+
+    .nav_tablets {
+        display: flex;
+        text-align: center;
+        height: 1000px;
+        background-color: rgba(0,0, 0, 0.4);
+        font-size: 1.6rem;
+        padding: 5%;
+        color: aliceblue;
+        line-height: 50px;
+        justify-content: center;
+    }
+
+    .nav_tablets ul {
+        list-style: none;
+    }
+
+    .nav_tablets li a :hover {
+        text-decoration: none;
+    }
+
+    .nav_tablets li a :hover {
+        color: blueviolet;
+    }
+
+    .cover {
+        position: relative;
+        width: 100%;
+        height: 95vh;
+        background-color: skyblue;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .cover p {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50% , -50%);
+        font-size: 4rem;
+    }
+
+    /* CONTENT */
+
+    .person {
+        margin-left: 25%;
+        height: 1000px;
+        background-color: aquamarine;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    /* PERSON 1 */
+
+    .p1 {
+        zoom: 0.8;
+        position: relative;
+        margin: 3%;
+        width: 400px;
+        height: 560px;
+        background-color: red;
+        border-radius: 50px;
+    }
+
+
+    .person1_img {
+        position: absolute;
+        border-top-left-radius: 50px;
+        border-top-right-radius: 50px;
+        top: 0%;
+        left: 0%;
+        width: 400px;
+        height: 35vh;
+        background-color: plum;
+    }
+
+    .name1 {
+        position: absolute;
+        border-radius: 50px;
+        top: -6%;
+        left: 50%;
+        transform: translate(-50%);
+        width: 250px;
+        height: 10vh;
+        z-index: 1;
+        background-color: palegoldenrod;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
+        font-family: 'IBM Plex Sans Thai', sans-serif;
+    }
+
+    .info1 {
+        position: absolute;
+        border-bottom-left-radius: 50px;
+        border-bottom-right-radius: 50px;
+        overflow: hidden;
+        top: 41%;
+        width: 400px;
+        height: 59%;
+        background-color: lightcoral;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 5%;
+        line-height: 27px;
+        font-size: 1.2rem;
+        font-family: 'IBM Plex Sans Thai Looped', sans-serif;
+
+    }
+
+    .activity_img1 {
+        position: absolute;
+        top: 40%;
+        left: 45%;
+        width: 40%;
+        height: 40vh;
+        background-color: darkcyan;
+    }
+
+    /* PERSON 2 */
+
+    .p2 {
+        zoom: 0.8;
+        position: relative;
+        margin: 3%;
+        width: 400px;
+        height: 560px;
+        background-color: red;
+        border-radius: 50px;
+    }
+
+
+    .person2_img {
+        position: absolute;
+        border-top-left-radius: 50px;
+        border-top-right-radius: 50px;
+        top: 0%;
+        left: 0%;
+        width: 400px;
+        height: 35vh;
+        background-color: plum;
+    }
+
+    .name2 {
+        position: absolute;
+        border-radius: 50px;
+        top: -6%;
+        left: 50%;
+        transform: translate(-50%);
+        width: 250px;
+        height: 10vh;
+        z-index: 1;
+        background-color: palegoldenrod;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+        font-family: 'IBM Plex Sans Thai', sans-serif;
+
+    }
+
+    .info2 {
+        position: absolute;
+        border-bottom-left-radius: 50px;
+        border-bottom-right-radius: 50px;
+        overflow: hidden;
+        top: 41%;
+        width: 400px;
+        height: 59%;
+        background-color: lightcoral;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 5%;
+        line-height: 27px;
+        font-size: 1.2rem;
+        font-family: 'IBM Plex Sans Thai Looped', sans-serif;
+    }
+
+    .activity_img2 {
+        position: absolute;
+        top: 40%;
+        left: 45%;
+        width: 20%;
+        height: 20vh;
+        background-color: darkcyan;
+    }
+
+    /* FOOTER */
+
+    .footer {
+        width: 100%;
+        height: 25vh;
+        background-color: salmon;
+        display: flex;
+        flex-direction: column;
+        line-height: 15px;
+    }
+    
+    .footer p {
+        font-size: 1rem;
+    }
+    
+    .contact {
+        padding-left: 2% ;
+        padding-top: 2%;
+    }
+    
+}
