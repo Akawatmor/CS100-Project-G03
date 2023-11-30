@@ -90,6 +90,7 @@ body {
     left: 50%;
     transform: translate(-50% , -50%);
     font-size: 4rem;
+    color: white;
 }
 
 /* CONTENT */
@@ -102,8 +103,8 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    
 }
+
 /* PERSON 1 */
 
 .p1 {
@@ -111,7 +112,7 @@ body {
     margin: 3%;
     width: 400px;
     height: 560px;
-    background-color: red;
+    background-color: #042D29;
     border-radius: 50px;
    
 
@@ -138,7 +139,8 @@ body {
     width: 250px;
     height: 10vh;
     z-index: 1;
-    background-color: palegoldenrod;
+    background-color: #042D29;
+    color: #D4C9B4;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -154,7 +156,8 @@ body {
     top: 45.5%;
     width: 400px;
     height: 54.5%;
-    background-color: lightcoral;
+    background-color: #042D29;
+    color: #D4C9B4;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -180,7 +183,7 @@ body {
     margin: 3%;
     width: 400px;
     height: 560px;
-    background-color: red;
+    background-color: #741102;
     border-radius: 50px;
 }
 
@@ -205,7 +208,8 @@ body {
     width: 250px;
     height: 10vh;
     z-index: 1;
-    background-color: palegoldenrod;
+    background-color: #741102;
+    color: #D4C9B4;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -222,7 +226,8 @@ body {
     top: 45.5%;
     width: 400px;
     height: 54.5%;
-    background-color: lightcoral;
+    background-color: #741102;
+    color: #D4C9B4;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -231,21 +236,13 @@ body {
     font-family: 'IBM Plex Sans Thai Looped', sans-serif;
 }
 
-.activity_img2 {
-    position: absolute;
-    top: 40%;
-    left: 45%;
-    width: 20%;
-    height: 20vh;
-    background-color: darkcyan;
-}
 
 /* FOOTER */
 
 .footer {
     width: 100%;
     height: 25vh;
-    background-color: salmon;
+    background-color: #D4C9B4;
     display: flex;
     flex-direction: column;
     line-height: 15px;
