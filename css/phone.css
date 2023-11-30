@@ -1,10 +1,13 @@
 *{
-    padding: 0;
-    margin: 0;
     box-sizing: border-box;
+    border:none;
+    margin: 0;
+    padding: 0;
+    font-family: 'IBM Plex Sans Thai', sans-serif;
+
 }
 
-@media  screen and (max-width: 480px) and (min-width: 279px){
+@media  screen and (max-width: 570px) and (min-width:279px) {
     /* BANNER */
 
     body {
@@ -31,33 +34,53 @@
         height: 5vh;
         display: flex;
         justify-content: space-between;
-        background-color: red;
+        background-color: orange;
         align-items: center;
     }
 
     .logo {
         position: absolute;
-        font-size: 1rem;
+        font-size: 1.5rem;
         color: white;
         left: 3%;
     }
 
-    .nav ul {
+    .nav ul{
+        display: none;
         position: absolute;
         right: 3%;
-        display: flex;
         list-style: none;
         gap: 1rem;
         color: aliceblue;
     }
 
-    .nav li a{
-        
+    .nav_phone{
+        position: absolute;
+        bottom: 0%;
+        display: block;
+        line-height: 50px;
+        width: 100%;
+        height: 24vh;
+        background-color: rgba(0,0, 0, 0.4);
+        font-size: 1.5rem;
+        padding: 5%;
+        color: aliceblue;
+    }
+
+    .nav_phone ul {
+        list-style: none;
+    }
+
+    .nav_phone li a :hover {
         text-decoration: none;
     }
 
-    .nav li a :hover {
+    .nav_phone li a :hover {
         color: blueviolet;
+    }
+
+    .nav_tablets {
+        display: none;
     }
 
     .cover {
@@ -65,50 +88,91 @@
         width: 100%;
         height: 95vh;
         background-color: skyblue;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
     }
 
     .cover p {
         position: absolute;
-        top: 46%;
-        left: 30%;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50% , -50%);
         font-size: 4rem;
     }
 
+    /* CONTENT */
+
+    .person {
+        width: 100%;
+        height: 1000px;
+        background-color: aquamarine;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        
+    }
     /* PERSON 1 */
 
-    .person1 {
+    .p1 {
+        zoom: 0.7;
         position: relative;
-        width: 100%;
-        height: 100vh;
-        background-color: aquamarine;
-
+        margin: 3%;
+        width: 400px;
+        height: 560px;
+        background-color: red;
+        border-radius: 50px;
     }
+
 
     .person1_img {
         position: absolute;
-        top: 15%;
-        left: 10%;
-        width: 28%;
-        height: 65vh;
+        border-top-left-radius: 50px;
+        border-top-right-radius: 50px;
+        top: 0%;
+        left: 0%;
+        width: 400px;
+        height: 35vh;
         background-color: plum;
     }
 
     .name1 {
         position: absolute;
-        top: 5%;
-        left: 3%;
-        width: 15%;
-        height: 80vh;
+        border-radius: 50px;
+        top: -6%;
+        left: 50%;
+        transform: translate(-50%);
+        width: 250px;
+        height: 10vh;
+        z-index: 1;
         background-color: palegoldenrod;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
+        font-family: 'IBM Plex Sans Thai', sans-serif;
     }
 
     .info1 {
         position: absolute;
-        top: 5%;
-        left: 45%;
-        width: 30%;
-        height: 30%;
+        border-bottom-left-radius: 50px;
+        border-bottom-right-radius: 50px;
+        overflow: hidden;
+        top: 41%;
+        width: 400px;
+        height: 59%;
         background-color: lightcoral;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 5%;
+        line-height: 27px;
+        font-size: 1.2rem;
+        font-family: 'IBM Plex Sans Thai Looped', sans-serif;
+
     }
 
     .activity_img1 {
@@ -122,47 +186,70 @@
 
     /* PERSON 2 */
 
-    .person2 {
+    .p2 {
+        zoom: 0.7;
         position: relative;
-        width: 100%;
-        height: 100vh;
-        background-color: darkgreen;
-
+        margin: 3%;
+        width: 400px;
+        height: 560px;
+        background-color: red;
+        border-radius: 50px;
     }
+
 
     .person2_img {
         position: absolute;
-        top: 15%;
-        left: 10%;
-        width: 28%;
-        height: 65vh;
+        border-top-left-radius: 50px;
+        border-top-right-radius: 50px;
+        top: 0%;
+        left: 0%;
+        width: 400px;
+        height: 35vh;
         background-color: plum;
     }
 
     .name2 {
         position: absolute;
-        top: 5%;
-        left: 3%;
-        width: 15%;
-        height: 80vh;
+        border-radius: 50px;
+        top: -6%;
+        left: 50%;
+        transform: translate(-50%);
+        width: 250px;
+        height: 10vh;
+        z-index: 1;
         background-color: palegoldenrod;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+        font-family: 'IBM Plex Sans Thai', sans-serif;
+
     }
 
     .info2 {
         position: absolute;
-        top: 5%;
-        left: 45%;
-        width: 30%;
-        height: 30%;
+        border-bottom-left-radius: 50px;
+        border-bottom-right-radius: 50px;
+        overflow: hidden;
+        top: 41%;
+        width: 400px;
+        height: 59%;
         background-color: lightcoral;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 5%;
+        line-height: 27px;
+        font-size: 1.2rem;
+        font-family: 'IBM Plex Sans Thai Looped', sans-serif;
     }
 
     .activity_img2 {
         position: absolute;
         top: 40%;
         left: 45%;
-        width: 40%;
-        height: 40vh;
+        width: 20%;
+        height: 20vh;
         background-color: darkcyan;
     }
 
@@ -170,22 +257,28 @@
 
     .footer {
         width: 100%;
-        height: 10vh;
+        height: 25vh;
         background-color: salmon;
-        position: relative;
+        display: flex;
+        flex-direction: column;
+        line-height: 15px;
     }
-
+    
     .footer p {
-        position: absolute;
-        top: 10%;
-        left: 2%;
         font-size: 1rem;
     }
+    
+    .contact {
+        padding-left: 2% ;
+        padding-top: 2%;
+    }
+    
+}
 
-    .contact_img {
-        position: absolute;
-        top: 50%;
-        left: 2%;
+@media  screen and (max-width: 279px) {
+
+    *{
+        display: none;
     }
 
 }
