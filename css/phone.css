@@ -11,21 +11,25 @@
     /* BANNER */
 
     body {
-        background-color: pink;
+        background-color: #B78C56;
     }
     .banner {
         width:100% ;
         height: 100vh;
-        background-color: aquamarine;
+        /*background-color: aquamarine;*/
         
     }
 
     .banner ::after {
+        content:"";
         width: 100%;
-        height: 100%;
-        background-image: url();
-        filter: brightness();
+        height: 100vh;
+        background-image: url('https://images.pexels.com/photos/697243/pexels-photo-697243.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+        filter: brightness(40%);
         background-size: cover;
+        z-index: -1;
+        position: absolute;
+        top: 0;
     }
 
     .nav {
@@ -34,7 +38,7 @@
         height: 5vh;
         display: flex;
         justify-content: space-between;
-        background-color: orange;
+        /*background-color: orange;*/
         align-items: center;
     }
 
@@ -76,7 +80,7 @@
     }
 
     .nav_phone li a :hover {
-        color: blueviolet;
+        color: #25330F;
     }
 
     .nav_tablets {
@@ -87,7 +91,7 @@
         position: relative;
         width: 100%;
         height: 95vh;
-        background-color: skyblue;
+        /*background-color: skyblue;*/
         text-align: center;
         display: flex;
         align-items: center;
@@ -108,7 +112,7 @@
     .person {
         width: 100%;
         height: 1000px;
-        background-color: aquamarine;
+        background-color: #B78C56;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -123,7 +127,7 @@
         margin: 3%;
         width: 400px;
         height: 560px;
-        background-color: red;
+        background-color: #042D29;
         border-radius: 50px;
     }
 
@@ -148,7 +152,8 @@
         width: 250px;
         height: 10vh;
         z-index: 1;
-        background-color: palegoldenrod;
+        background-color: #042D29;
+        color: white;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -164,7 +169,8 @@
         top: 41%;
         width: 400px;
         height: 59%;
-        background-color: lightcoral;
+        background-color: #042D29;
+        color: #D4C9B4;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -192,7 +198,7 @@
         margin: 3%;
         width: 400px;
         height: 560px;
-        background-color: red;
+        background-color: #741102;
         border-radius: 50px;
     }
 
@@ -217,7 +223,8 @@
         width: 250px;
         height: 10vh;
         z-index: 1;
-        background-color: palegoldenrod;
+        background-color: #741102;
+        color: white;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -234,7 +241,8 @@
         top: 41%;
         width: 400px;
         height: 59%;
-        background-color: lightcoral;
+        background-color: #741102;
+        color: #D4C9B4;
         display: flex;
         justify-content: center;
         align-items: center;
