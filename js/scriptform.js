@@ -200,6 +200,7 @@ function validateDate() {
 
 
 // Function to fetch activity types from the backend
+/*
 async function fetchActivityTypes() {
   try {
     const response = await fetch(config.backendUrl + "getActivityType");
@@ -215,8 +216,10 @@ async function fetchActivityTypes() {
     return [];
   }
 }
+*/
 
 // Function to populate activity types in the select element
+/*
 function populateActivityTypes(activityTypes) {
   const activityTypeSelect = document.getElementById("activityType");
 
@@ -233,7 +236,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   const activityTypes = await fetchActivityTypes();
   populateActivityTypes(activityTypes);
 });
-
+*/
 
 
 function validcheck(){
@@ -302,7 +305,7 @@ alert("บันทึกข้อมูลได้สำเร็จ");
 z++;
 
 
-document.getElementById("myForm").reset();
+//document.getElementById("myForm").reset();
 }
 
 }
@@ -312,6 +315,7 @@ document.getElementById("myForm").reset();
 
 
 //read image
+/*
 var fileTag = document.getElementById("filetag"),
     preview = document.getElementById("preview");
     
@@ -332,7 +336,7 @@ function changeImage(input) {
     reader.readAsDataURL(input.files[0]);
   }
 }
-
+*/
 
 
 // Event listener for form submission
@@ -368,7 +372,7 @@ async function submitForm(event) {
 !validateLocation() + 
 !validateDate();
 
-  if (a>0) {
+ if (a>0) {
    console.log("Can't fetch! Please check all error point!")
     return;
   }

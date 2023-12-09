@@ -42,12 +42,11 @@ sudo systemctl start nginx
 sudo systemctl enable nginx
 
 sudo cp -r /home/ec2-user/CS100-Project-G03/css /usr/share/nginx/html/
+sudo cp -r /home/ec2-user/CS100-Project-G03/js /usr/share/nginx/html/
 sudo cp -r /home/ec2-user/CS100-Project-G03/design /usr/share/nginx/html/
 sudo cp -r /home/ec2-user/CS100-Project-G03/pic /usr/share/nginx/html/
+sudo cp -r /home/ec2-user/CS100-Project-G03/html /usr/share/nginx/html/
 sudo cp  /home/ec2-user/CS100-Project-G03/index.html /usr/share/nginx/html/
-sudo cp  /home/ec2-user/CS100-Project-G03/scriptform.js /usr/share/nginx/html/
-sudo cp  /home/ec2-user/CS100-Project-G03/Activity.html /usr/share/nginx/html/
-
 
 # Restart Nginx to reflect the changes
 sudo systemctl restart nginx
