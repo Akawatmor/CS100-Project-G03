@@ -24,20 +24,20 @@
     /* BANNER */
 
     body {
-        background-color: pink;
+        background-color: #B78C56;
     }
     .banner {
         width:100% ;
         height: 100vh;
-        background-color: aquamarine;
+        /*background-color: aquamarine;*/
         
     }
 
     .banner ::after {
         width: 100%;
         height: 100%;
-        background-image: url();
-        filter: brightness();
+        background-image: url('https://images.pexels.com/photos/697243/pexels-photo-697243.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+        filter: brightness(40%);
         background-size: cover;
     }
 
@@ -47,7 +47,7 @@
         height: 5vh;
         display: flex;
         justify-content: space-between;
-        background-color: indigo;
+        /*background-color: indigo;*/
         align-items: center;
     }
 
@@ -92,14 +92,14 @@
     }
 
     .nav_tablets li a :hover {
-        color: blueviolet;
+        color: #25330F;
     }
 
     .cover {
         position: relative;
         width: 100%;
         height: 95vh;
-        background-color: skyblue;
+        /*background-color: skyblue;*/
         text-align: center;
         display: flex;
         align-items: center;
@@ -120,7 +120,7 @@
     .person {
         margin-left: 25%;
         height: 1000px;
-        background-color: aquamarine;
+        background-color: #B78C56;
         display: flex;
         flex-direction: column;
         flex-wrap: nowrap;
@@ -136,7 +136,7 @@
         margin: 3%;
         width: 400px;
         height: 560px;
-        background-color: red;
+        background-color: #042D29;
         border-radius: 50px;
     }
 
@@ -161,7 +161,8 @@
         width: 250px;
         height: 10vh;
         z-index: 1;
-        background-color: palegoldenrod;
+        background-color: #042D29;
+        color: white;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -177,7 +178,8 @@
         top: 41%;
         width: 400px;
         height: 59%;
-        background-color: lightcoral;
+        background-color: #042D29;
+        color: #D4C9B4;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -205,7 +207,7 @@
         margin: 3%;
         width: 400px;
         height: 560px;
-        background-color: red;
+        background-color: #741102;
         border-radius: 50px;
     }
 
@@ -230,7 +232,8 @@
         width: 250px;
         height: 10vh;
         z-index: 1;
-        background-color: palegoldenrod;
+        background-color: #741102;
+        color: white;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -247,7 +250,8 @@
         top: 41%;
         width: 400px;
         height: 59%;
-        background-color: lightcoral;
+        background-color: #741102;
+        color: #D4C9B4;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -257,21 +261,12 @@
         font-family: 'IBM Plex Sans Thai Looped', sans-serif;
     }
 
-    .activity_img2 {
-        position: absolute;
-        top: 40%;
-        left: 45%;
-        width: 20%;
-        height: 20vh;
-        background-color: darkcyan;
-    }
-
     /* FOOTER */
 
     .footer {
         width: 100%;
         height: 25vh;
-        background-color: salmon;
+        background-color: #B78C56;
         display: flex;
         flex-direction: column;
         line-height: 15px;
@@ -284,6 +279,11 @@
     .contact {
         padding-left: 2% ;
         padding-top: 2%;
+    }
+
+    .contact_img a img {
+        width: 28px;
+        height: 28px;
     }
     
 }
