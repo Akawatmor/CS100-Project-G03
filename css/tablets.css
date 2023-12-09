@@ -92,8 +92,8 @@
         text-decoration: none;
     }
 
-    .nav_tablets li a :hover {
-        color: wheat;
+    .nav_tablets li a:hover {
+        color: #B78C56;
     }
 
     .cover {

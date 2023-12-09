@@ -81,8 +81,8 @@
         text-decoration: none;
     }
 
-    .nav_phone li a :hover {
-        color: wheat;
+    .nav_phone li a:hover {
+        color: #B78C56;
     }
 
     .nav_tablets {

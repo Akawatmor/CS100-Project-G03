@@ -72,8 +72,8 @@ body {
 
 }
 
-.nav li a :hover {
-    color: wheat;
+.nav li a:hover {
+    color: #B78C56;
 }
 
 .cover {
