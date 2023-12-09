@@ -35,6 +35,7 @@ app.get('/', (req, res) => {
 app.post('/record', (req, res) => {
     const data = req.body;
 
+    /*
     // Check for mandatory fields in the incoming request
     if (!data.first_name || !data.last_name || !data.student_id || !data.email || !data.title || 
       !data.type_of_work_id || !data.academic_year || !data.semester || !data.start_date || !data.end_date || !data.location || !data.description) {
@@ -46,6 +47,7 @@ app.post('/record', (req, res) => {
     if (dateValidationError) {
       return res.status(400).json({message: dateValidationError});
     }
+    */
 
     // Structure the record for saving
     const record = {
