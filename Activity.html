@@ -1,29 +1,27 @@
-<!--
-  File: index.html
-  Author: CS100 Team
-  Date Created: 23 July 2023
-  Copyright: CSTU
-  Description: HTML code of CSTU Passport that validate with JS
--->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
   <title>Forms - CSTU Passport</title>
+  <link rel="icon" type="image/jpg" href="icon.jpg">
   <link rel="stylesheet" href="css/styleform.css">
 </head>
 <body>
   <div class="backgroundmain">
+    <div class="Title">
     <h1>My Activity</h1>
     <h3>โปรดกรอกกิจกรรมที่ได้ทำลงไปให้ครบถ้วนและถูกต้อง</h3>
+    </div>
   <!-- Form Container -->
   <div class="form-container">
     <!-- Main Form -->
     <form id="myForm" action="#" method="post">
 
+
+    <fieldset>
+    <legend>ข้อมูลส่วนตัวผู้กรอก</legend>
+    <br>
       <!-- Firstname and Lastname Field -->
       <div class="form-group">
         <label for="fullname">ชื่อ-นามสกุล</label>
@@ -55,6 +53,12 @@
         <span id="phoneError" class="error"></span>
       </div>
 
+    </fieldset>
+    <br>
+
+    <fieldset>
+      <legend>กิจกรรม</legend>
+      <br>
       <!-- Work/Activity Title Field -->
       <div class="form-group">
         <label for="workTitle">กิจกรรม/งานที่ได้ทำ</label>
@@ -90,7 +94,12 @@
           <option value="Computer Science">Computer Science</option>
         </select>
       </div> -->
+    </fieldset>
+    <br>
 
+      <fieldset>
+        <legend>เวลากิจกรรม</legend>
+      <br>
       <!-- Academic Year Field -->
       <div class="form-group">
         <label for="academicYear">ปีการศึกษา</label>
@@ -108,6 +117,7 @@
         </select>
         <span id="aYearError" class="error"></span>
       </div>
+    
 
       <!-- Semester Field -->
       <div class="form-group">
@@ -136,6 +146,7 @@
       </div>
       </fieldset>
       <span id="dateError" class="error"></span>
+      </fieldset>
       <br>
 
       <!-- Location Field -->
@@ -204,6 +215,7 @@
 
 
 </div>
+<footer>Version 1.7</footer>
   <!-- JavaScript -->
   <script src="scriptform.js"></script>
 </body>
