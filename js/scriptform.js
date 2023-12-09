@@ -336,7 +336,7 @@ z++;
 
 
 
-//preview
+//preview image
 
 var fileTag = document.getElementById("filetag"),
     preview = document.getElementById("preview"),
@@ -417,7 +417,7 @@ async function submitForm(event) {
     end_date: formData.get("endDate"),
     location: formData.get("location"),
     description: formData.get("description"),
-    pic_data: document.getElementById("picturedata").textContent
+    //pic_data: document.getElementById("picturedata").textContent
   };
 
   console.log(data);
@@ -444,6 +444,8 @@ async function submitForm(event) {
 
       // Display success message with formatted data
       alert(responseData.message + "\n" + formattedData);
+
+      displaydata();
 
       document.getElementById("myForm").reset();
     } else {
