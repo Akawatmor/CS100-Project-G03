@@ -305,7 +305,7 @@ alert("บันทึกข้อมูลได้สำเร็จ");
 z++;
 
 
-document.getElementById("myForm").reset();
+//document.getElementById("myForm").reset();
 }
 
 }
@@ -315,6 +315,7 @@ document.getElementById("myForm").reset();
 
 
 //read image
+/*
 var fileTag = document.getElementById("filetag"),
     preview = document.getElementById("preview");
     
@@ -335,7 +336,7 @@ function changeImage(input) {
     reader.readAsDataURL(input.files[0]);
   }
 }
-
+*/
 
 
 // Event listener for form submission
@@ -371,7 +372,7 @@ async function submitForm(event) {
 !validateLocation() + 
 !validateDate();
 
-  if (a>0) {
+ if (a>0) {
    console.log("Can't fetch! Please check all error point!")
     return;
   }
