@@ -1,0 +1,46 @@
+#!/bin/bash
+
+#update instance
+sudo yum update -y || sudo apt-get update -y
+
+#install git
+sudo yum install -y git || sudo apt-get install -y git
+
+#install node.js and npm for amazon linux 2
+sudo yum install -y nodejs npm ||{
+    #For ubuntu-based instances
+    curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+    sudo apt-get install -y nodejs
+}
+
+#install pm2 globally
+sudo npm install pm2 -g
+
+#go to home directory of current user
+cd /home/ec2-user
+
+#clone github repository
+git clone -b main https://github.com/Akawatmor/CS100-Project-G03.git
+
+#cd main
+sudo npm install
+
+#start application using pm2
+sudo pm2 start index.js
+
+#save current pm2 process
+sudo pm2 save
+
+#pm2 start on boot
+sudo pm2 startup
+
+sudo yum install -y nginx
+
+sudo systemctl start nginx
+sudo systemctl enable nginx
+
+sudo cp -r /home/ec2-user/...
+sudo cp  /home/ec2-user/...
+
+#restart nginx
+sudo systemct1 restart nginx

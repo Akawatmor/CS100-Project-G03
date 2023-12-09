@@ -123,6 +123,11 @@ function validateAyear() {
     return false;
   }
   
+  else if (ayearInput.value != 2566){
+    errorElement.textContent = "แนะนำให้คุณเลือกปีการศึกษานี้ (2566) [ไม่ใช่ข้อผิดพลาด]";
+
+  }
+
   else {
     errorElement.textContent = "";
   }
@@ -139,6 +144,10 @@ function validateSemester() {
     return false;
   }
   
+  else if (semesterInput.value != 1 ){
+    errorElement.textContent = "แนะนำให้คุณเลือกเทอมนี้ (เทอม 1) [ไม่ใช่ข้อผิดพลาด]";
+  }
+
   else {
     errorElement.textContent = "";
   }
@@ -349,21 +358,37 @@ const phone = document.getElementById("phoneNum");
 
 validcheck();
 
-a = !validateName() + !validateStudentID() + !validateEmail() + !validateWork() + !validateWorkType() + !validatePhone() + !validateSemester() + !validateAyear() + !validateLocation() + !validateDate();
+a = !validateName() + 
+!validateStudentID() + 
+!validateEmail() + 
+!validateWork() + 
+!validateWorkType() + 
+!validatePhone() + 
+!validateSemester() + 
+!validateAyear() + 
+!validateLocation() + 
+!validateDate();
 
 const errorElement = document.getElementById("allError");
   if (a > 0 ) {
     errorElement.textContent =
       "ไม่สามารถบันทึกได้ เนื่องจากมีจุดผิดพลาด "+a+" จุด";
       alert("ไม่สามารถบันทึกได้เนื่องจากมีจุดผิดพลาด โปรดแก้ไขก่อนที่จะกด Submit อีกครั้ง");
+
+      document.getElementById("ActNext").insertAdjacentHTML("afterend",
+'<h1>My Previous Activity</h1><table><div><tr id="style2"><td colspan="3"><h2>Activity n : งาน123456789</h2></tr><tr id="style2"><td><h3>ภาพกิจกรรม</h3><img src="" width="400vh" height="300vh" id="style3" /></td><td width="600vh"><h2>ชื่อคนที่ทำกิจกรรม : </h2><h3>รหัสนักศึกษา : </h3><h3>อีเมลล์ : </h3><h3>อยู่ปีการศึกษา : </h3><h3>เบอร์โทรศัพท์ : </h3><br><h3>ชนิดกิจกรรม : </h3><h3>วันเริ่ม-จบกิจกรรม : </h3><h3>สถานที่ทำกิจกรรม : </h3><h3>รายละเอียดกิจกรรมเพิ่มเติม : </h3></td></tr></div></table>');
+
   }
   else{
   errorElement.textContent = "";
 //document.getElementById("addnexttext").insertAdjacentHTML("afterend","<tr><td>"+a+"</td><td>"+fullname.value+"</td><td>"+studentid.value+"</td><td>"+work.value+" - TypeOfWork</td><td>Semester/A.year</td><td>Places</td></tr>");
-document.getElementById("ActNext").insertAdjacentHTML("afterend",'<div><tr><td colspan="2"><h2>Activity'+z+' : '+work.value+'</h2></td></tr><tr id="style2"><td><h3>ภาพกิจกรรม</h3><img src="" width="400vh" height="300vh" id="style3" /></td><td width="600vh"><h2>ชื่อคนที่ทำกิจกรรม : '+fullname.value+'</h2><h3>รหัสนักศึกษา : '+studentid.value+'</h3><h3>อีเมลล์ : '+email.value+'</h3><h3>อยู่ปีการศึกษา : '+semes+'/'+ayear+'</h3><h3>เบอร์โทรศัพท์ : '+phone.value+'</h3><br><h3>ชนิดกิจกรรม : '+worktype+'</h3><h3>วันเริ่ม-จบกิจกรรม : '+startdatetime.value+'-'+enddatetime.value+'</h3><h3>สถานที่ทำกิจกรรม : '+locate+'</h3><h3>รายละเอียดกิจกรรมเพิ่มเติม : '+description+'</h3></td></tr></div>' );
+document.getElementById("ActNext").insertAdjacentHTML("afterend",
+'<div><tr><td colspan="2"><h2>Activity'+z+' : '+work.value+'</h2></td></tr><tr id="style2"><td><h3>ภาพกิจกรรม</h3><img src="" width="400vh" height="300vh" id="style3" /></td><td width="600vh"><h2>ชื่อคนที่ทำกิจกรรม : '+fullname.value+'</h2><h3>รหัสนักศึกษา : '+studentid.value+'</h3><h3>อีเมลล์ : '+email.value+'</h3><h3>อยู่ปีการศึกษา : '+semes+'/'+ayear+'</h3><h3>เบอร์โทรศัพท์ : '+phone.value+'</h3><br><h3>ชนิดกิจกรรม : '+worktype+'</h3><h3>วันเริ่ม-จบกิจกรรม : '+startdatetime.value+'-'+enddatetime.value+'</h3><h3>สถานที่ทำกิจกรรม : '+locate+'</h3><h3>รายละเอียดกิจกรรมเพิ่มเติม : '+description+'</h3></td></tr></div>' );
+
 
 alert("บันทึกข้อมูลได้สำเร็จ");
 z++;
+
 
 document.getElementById("myForm").reset();
 }

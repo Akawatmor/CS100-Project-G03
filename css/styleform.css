@@ -107,3 +107,9 @@ body{
   margin: auto;
   width: 60%;
 }
+
+.Title{
+  padding-left:50px;
+  padding-top:25px;
+  font-size:larger;
+}
