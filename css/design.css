@@ -55,7 +55,6 @@ body {
     display: flex;
     list-style: none;
     gap: 1rem;
-    color: aliceblue;
     font-size: 1.3rem;
 }
 
@@ -69,10 +68,12 @@ body {
 
 .nav li a{
     text-decoration: none;
+    color: aliceblue;
+
 }
 
-.nav li a :hover {
-    color: wheat;
+.nav li a:hover {
+    color: #B78C56;
 }
 
 .cover {
