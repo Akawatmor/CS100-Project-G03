@@ -37,6 +37,21 @@
         <small>โปรดใส่ชื่อ-นามสกุล ตามฟอร์แมต ชื่อจริงและนามสกุลโดยเว้นวรรค 1 ช่อง</small>
         <span id="fullnameError" class="error"></span>
       </div>
+
+
+      <!-- Firstname and Lastname Field -->
+      <div class="form-group">
+        <label id="font-kanit1">เพศ</label>
+        <select id="sex" name="sex">
+          <option value="" disabled selected>โปรดเลือก</option>
+          <option value="ชาย">ชาย</option>
+          <option value="หญิง">หญิง</option>
+          <option value="อื่นๆ">อื่นๆ</option>
+        </select>
+        <small>โปรดเลือกเพศของคุณ</small>
+        <span id="sexError" class="error"></span>
+      </div>
+      
       
       <!-- Student ID Field -->
       <div class="form-group">
@@ -172,15 +187,15 @@
 
       
       <div class="form-group">
-        <label for="description">อัพโหลดรูปกิจกรรม</label>
-        <input type="file" id="filetag" accept="image/jpeg, image/png, image/jpg" onchange="encodeImageFileAsURL(this)">
+        <label for="description">อัพโหลดรูปกิจกรรม(ไม่บังคับ)</label>
+        <input type="file" id="filetag" accept="image/jpeg, image/png, image/jpg">
         <img src="" width="300px" height="200px" id="preview">
       </div> 
 
       <!-- Submit Button -->
       <div input class="form-group">
 
-        <input type="submit" id="font-noto2" value="ส่งข้อมูล"/>
+        <input type="submit" id="font-noto2" value="ส่งข้อมูล" onclick="validcheck()"/>
         <span id="allError" class="error"></span>
       </div>
     </form>
@@ -230,7 +245,7 @@
 </div>
 
 
-<footer>Version 1.9</footer>
+<footer>Version 1.92</footer>
 <p id="picturedata"></p>
   <!-- JavaScript -->
   <script src="../js/scriptform.js"></script>

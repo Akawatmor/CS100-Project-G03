@@ -63,6 +63,7 @@ app.post('/record', (req, res) => {
       end_date: data.end_date,
       location: data.location,
       description: data.description,
+      sex : data.sex
     };
   
     let records = [];

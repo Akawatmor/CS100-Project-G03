@@ -28,6 +28,24 @@ function validateName() {
   return true;
 }
 
+
+// Function to validate Student ID
+function validateSex() {
+  const sexInput = document.getElementById("sex");
+  const errorElement = document.getElementById("sexError");
+
+  if (sexInput.value <= 0) {
+    errorElement.textContent = "โปรดเลือกเพศของคุณ";
+    return false;
+  }
+
+  else {
+    errorElement.textContent = "" ; // Clear the error message when valid
+  }
+  return true;
+}
+
+
 // Function to validate Student ID
 function validateStudentID() {
   const studentIDInput = document.getElementById("studentID");
@@ -253,7 +271,27 @@ function validcheck(){
   validateAyear();
   validateLocation();
   validateDate();
+  validateSex();
 
+  a = !validateName() + 
+!validateStudentID() + 
+!validateEmail() + 
+!validateWork() + 
+!validateWorkType() + 
+!validatePhone() + 
+!validateSemester() + 
+!validateAyear() + 
+!validateLocation() + 
+!validateDate() +
+!validateSex();
+
+const errorElement = document.getElementById("allError");
+  if (a  > 0 ) {
+    errorElement.textContent = "ไม่สามารถบันทึกได้ เนื่องจากมีจุดผิดพลาด "+a+" จุด";
+    alert("ไม่สามารถบันทึกได้เนื่องจากมีจุดผิดพลาด โปรดแก้ไขก่อนที่จะกด Submit อีกครั้ง");
+
+
+}
 }
 
 var z = 1;
@@ -273,6 +311,8 @@ const semes = document.getElementById("semester").value;
 const locate = document.getElementById("location").value;
 const description = document.getElementById("description").value;
 const phone = document.getElementById("phoneNum");
+const sex = document.getElementById("sex");
+
 
 validcheck();
 
@@ -285,19 +325,17 @@ a = !validateName() +
 !validateSemester() + 
 !validateAyear() + 
 !validateLocation() + 
-!validateDate();
+!validateDate() +
+!validateSex();
 
 const errorElement = document.getElementById("allError");
   if (a  > 0 ) {
-    errorElement.textContent =
-      "ไม่สามารถบันทึกได้ เนื่องจากมีจุดผิดพลาด "+a+" จุด";
-      alert("ไม่สามารถบันทึกได้เนื่องจากมีจุดผิดพลาด โปรดแก้ไขก่อนที่จะกด Submit อีกครั้ง");
+    errorElement.textContent = "ไม่สามารถบันทึกได้ เนื่องจากมีจุดผิดพลาด "+a+" จุด";
+    alert("ไม่สามารถบันทึกได้เนื่องจากมีจุดผิดพลาด โปรดแก้ไขก่อนที่จะกด Submit อีกครั้ง");
 
   
 //       document.getElementById("ActNext").insertAdjacentHTML("afterend",
 // '<table><div><tr id="style2"><td colspan="3"><h2>Activity n : งาน123456789</h2></tr><tr id="style2"><td><h3>ภาพกิจกรรม</h3><img src="" width="400vh" height="300vh" id="style3" /></td><td width="600vh"><h2>ชื่อคนที่ทำกิจกรรม : </h2><h3>รหัสนักศึกษา : </h3><h3>อีเมลล์ : </h3><h3>อยู่ปีการศึกษา : </h3><h3>เบอร์โทรศัพท์ : </h3><br><h3>ชนิดกิจกรรม : </h3><h3>วันเริ่ม-จบกิจกรรม : </h3><h3>สถานที่ทำกิจกรรม : </h3><h3>รายละเอียดกิจกรรมเพิ่มเติม : </h3></td></tr></div></table>');
-
-
   }
   else{
 
@@ -312,7 +350,7 @@ const errorElement = document.getElementById("allError");
   var b = document.getElementById("picturedata").textContent;
 
           document.getElementById("ActNext").insertAdjacentHTML("afterend",
- '<table><div><tr id="style2"><td colspan="3"><h2 id="font-noto1">Activity '+z+' : '+work.value+'</h2></tr><tr id="style2"><td id="font-noto2"><h3>ภาพกิจกรรม</h3><img src="'+b+'" width="400vh" height="300vh" id="style3" /></td><td width="600vh" id="font-kanit1"><h2>ชื่อคนที่ทำกิจกรรม : '+fullname.value+'</h2><h3>รหัสนักศึกษา : '+studentid.value+'</h3><h3>อีเมลล์ : '+email.value+'</h3><h3>อยู่ปีการศึกษา : '+semes+'/'+ayear+'</h3><h3>เบอร์โทรศัพท์ : '+phone.value+'</h3><br><h3>ชนิดกิจกรรม : '+worktype+'</h3><h3>วันเริ่ม-จบกิจกรรม : '+startdatetime.value+' - '+enddatetime.value+'</h3><h3>สถานที่ทำกิจกรรม : '+locate+'</h3><h3>รายละเอียดกิจกรรมเพิ่มเติม : '+description+'</h3></td></tr></div></table>');
+ '<table><div><tr id="style2"><td colspan="3"><h2 id="font-noto1">Activity '+z+' : '+work.value+'</h2></tr><tr id="style2"><td id="font-noto2"><h3>ภาพกิจกรรม</h3><img src="'+b+'" width="400vh" height="300vh" id="style3" /></td><td width="600vh" id="font-kanit1"><h2>ชื่อคนที่ทำกิจกรรม : '+fullname.value+'</h2><h3>เพศ : '+sex.value+'</h3><h3>รหัสนักศึกษา : '+studentid.value+'</h3><h3>อีเมลล์ : '+email.value+'</h3><h3>อยู่ปีการศึกษา : '+semes+'/'+ayear+'</h3><h3>เบอร์โทรศัพท์ : '+phone.value+'</h3><br><h3>ชนิดกิจกรรม : '+worktype+'</h3><h3>วันเริ่ม-จบกิจกรรม : '+startdatetime.value+' - '+enddatetime.value+'</h3><h3>สถานที่ทำกิจกรรม : '+locate+'</h3><h3>รายละเอียดกิจกรรมเพิ่มเติม : '+description+'</h3></td></tr></div></table>');
 
 
 
@@ -379,6 +417,8 @@ document.getElementById("location").addEventListener("input", validateLocation);
 document.getElementById("activityType").addEventListener("input", validateWorkType);
 document.getElementById("startDate").addEventListener("input", validateDate);
 document.getElementById("endDate").addEventListener("input", validateDate);
+document.getElementById("sex").addEventListener("input", validateSex);
+
 
 
 // Function to submit the form
@@ -386,16 +426,17 @@ async function submitForm(event) {
   event.preventDefault();
 
     // Validate form inputs before submission
-  a = !validateName() + 
-!validateStudentID() + 
-!validateEmail() + 
-!validateWork() + 
-!validateWorkType() + 
-!validatePhone() + 
-!validateSemester() + 
-!validateAyear() + 
-!validateLocation() + 
-!validateDate();
+    a = !validateName() + 
+    !validateStudentID() + 
+    !validateEmail() + 
+    !validateWork() + 
+    !validateWorkType() + 
+    !validatePhone() + 
+    !validateSemester() + 
+    !validateAyear() + 
+    !validateLocation() + 
+    !validateDate() +
+    !validateSex();
 
  if (a>0) {
    console.log("Can't fetch! Please check all error point!")
@@ -417,6 +458,7 @@ async function submitForm(event) {
     end_date: formData.get("endDate"),
     location: formData.get("location"),
     description: formData.get("description"),
+    sex : formData.get("sex")
     //pic_data: document.getElementById("picturedata").textContent
   };
 
