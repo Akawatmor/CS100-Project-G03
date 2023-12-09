@@ -7,10 +7,10 @@
 */
 
 const config = {
-  // backendUrl: "http://54.179.42.49/", // Default backend URL
-  // backendUrl: "https://d1npkyc4r380kx.cloudfront.net/", // Default backend URL
-  backendUrl: "https://d1a6370uhsfk5w.cloudfront.net/", // Default backend URL
+  backendUrl: "http://localhost:8000/", // Default backend URL
 };
+const port = 8000;
+
 
 // Function to validate Firstname and Lastname
 function validateName() {
@@ -199,18 +199,6 @@ function validateDate() {
 
 
 
-
-
-
-
-
-// Function to validate form inputs on user input
-function validateFormOnInput() {
-  validateName();
-  validateStudentID();
-  validateEmail();
-}
-
 // Function to fetch activity types from the backend
 async function fetchActivityTypes() {
   try {
@@ -247,82 +235,6 @@ document.addEventListener("DOMContentLoaded", async () => {
 });
 
 
-// Function to submit the form
-// Function to submit the form
-async function submitForm(event) {
-  event.preventDefault();
-
-  // Validate form inputs before submission
-  if (!validateName() || !validateStudentID() || !validateEmail()) {
-    return;
-  }
-
-
-  //
-  const startDateInput = document.getElementById("startDate").value;
-  const endDateInput = document.getElementById("endDate").value;
-  const startDate = new Date(startDateInput);
-  const endDate = new Date(endDateInput);
-
-  if (endDate <= startDate) {
-    alert("End datetime should be after the start datetime.");
-    return;
-  }
-
-  // Create the data object to send to the backend
-  const formData = new FormData(event.target);
-  const data = {
-    first_name: formData.get("fullname").split(" ")[0],
-    last_name: formData.get("fullname").split(" ")[1],
-    student_id: parseInt(formData.get("studentID")),
-    email: formData.get("email"),
-    title: formData.get("workTitle"),
-    type_of_work_id: parseInt(formData.get("activityType")),
-    academic_year: parseInt(formData.get("academicYear")) - 543,
-    semester: parseInt(formData.get("semester")),
-    start_date: formData.get("startDate"),
-    end_date: formData.get("endDate"),
-    location: formData.get("location"),
-    description: formData.get("description")
-  };
-
-  console.log(data);
-
-  /*
-  try {
-    // Send data to the backend using POST request
-    const response = await fetch(config.backendUrl + "record", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    });
-
-    if (response.ok) {
-      const responseData = await response.json();
-      console.log("Form data submitted successfully!");
-
-      // Format JSON data for display
-      const formattedData = Object.entries(responseData.data)
-        .map(([key, value]) => `"${key}": "${value}"`)
-        .join("\n");
-
-      // Display success message with formatted data
-      alert(responseData.message + "\n" + formattedData);
-
-      document.getElementById("myForm").reset();
-    } else {
-      console.error("Failed to submit form data.");
-
-      // Display error message
-      alert("Failed to submit form data. Please try again.");
-    }
-  } catch (error) {
-    console.error("An error occurred while submitting form data:", error);
-  }
-  */
-}
 
 function validcheck(){
   validateName();
@@ -438,3 +350,78 @@ document.getElementById("location").addEventListener("input", validateLocation);
 document.getElementById("activityType").addEventListener("input", validateWorkType);
 document.getElementById("startDate").addEventListener("input", validateDate);
 document.getElementById("endDate").addEventListener("input", validateDate);
+
+
+// Function to submit the form
+async function submitForm(event) {
+  event.preventDefault();
+
+    // Validate form inputs before submission
+  a = !validateName() + 
+!validateStudentID() + 
+!validateEmail() + 
+!validateWork() + 
+!validateWorkType() + 
+!validatePhone() + 
+!validateSemester() + 
+!validateAyear() + 
+!validateLocation() + 
+!validateDate();
+
+  if (a>0) {
+   console.log("Can't fetch! Please check all error point!")
+    return;
+  }
+
+  // Create the data object to send to the backend
+  const formData = new FormData(event.target);
+  const data = {
+    first_name: formData.get("fullname").split(" ")[0],
+    last_name: formData.get("fullname").split(" ")[1],
+    student_id: parseInt(formData.get("studentID")),
+    email: formData.get("email"),
+    title: formData.get("workTitle"),
+    type_of_work_id: parseInt(formData.get("activityType")),
+    academic_year: parseInt(formData.get("academicYear")) - 543,
+    semester: parseInt(formData.get("semester")),
+    start_date: formData.get("startDate"),
+    end_date: formData.get("endDate"),
+    location: formData.get("location"),
+    description: formData.get("description")
+  };
+
+  console.log(data);
+
+  try {
+    // Send data to the backend using POST request
+    const response = await fetch(`http://${window.location.hostname}:${port}/record`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+
+    if (response.ok) {
+      const responseData = await response.json();
+      console.log("Form data submitted successfully!");
+
+      // Format JSON data for display
+      const formattedData = Object.entries(responseData.data)
+        .map(([key, value]) => `"${key}": "${value}"`)
+        .join("\n");
+
+      // Display success message with formatted data
+      alert(responseData.message + "\n" + formattedData);
+
+      document.getElementById("myForm").reset();
+    } else {
+      console.error("Failed to submit form data.");
+
+      // Display error message
+      alert("Failed to submit form data. Please try again.");
+    }
+  } catch (error) {
+    console.error("An error occurred while submitting form data:", error);
+  }
+}
