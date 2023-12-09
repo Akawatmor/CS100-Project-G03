@@ -200,6 +200,7 @@ function validateDate() {
 
 
 // Function to fetch activity types from the backend
+/*
 async function fetchActivityTypes() {
   try {
     const response = await fetch(config.backendUrl + "getActivityType");
@@ -215,8 +216,10 @@ async function fetchActivityTypes() {
     return [];
   }
 }
+*/
 
 // Function to populate activity types in the select element
+/*
 function populateActivityTypes(activityTypes) {
   const activityTypeSelect = document.getElementById("activityType");
 
@@ -233,7 +236,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   const activityTypes = await fetchActivityTypes();
   populateActivityTypes(activityTypes);
 });
-
+*/
 
 
 function validcheck(){
