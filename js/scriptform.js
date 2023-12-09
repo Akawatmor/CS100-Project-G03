@@ -239,6 +239,9 @@ document.addEventListener("DOMContentLoaded", async () => {
 */
 
 
+  
+
+
 function validcheck(){
   validateName();
   validateStudentID();
@@ -285,25 +288,43 @@ a = !validateName() +
 !validateDate();
 
 const errorElement = document.getElementById("allError");
-  if (a > 0 ) {
+  if (a  > 0 ) {
     errorElement.textContent =
       "ไม่สามารถบันทึกได้ เนื่องจากมีจุดผิดพลาด "+a+" จุด";
       alert("ไม่สามารถบันทึกได้เนื่องจากมีจุดผิดพลาด โปรดแก้ไขก่อนที่จะกด Submit อีกครั้ง");
 
-      document.getElementById("ActNext").insertAdjacentHTML("afterend",
-'<h1>My Previous Activity</h1><table><div><tr id="style2"><td colspan="3"><h2>Activity n : งาน123456789</h2></tr><tr id="style2"><td><h3>ภาพกิจกรรม</h3><img src="" width="400vh" height="300vh" id="style3" /></td><td width="600vh"><h2>ชื่อคนที่ทำกิจกรรม : </h2><h3>รหัสนักศึกษา : </h3><h3>อีเมลล์ : </h3><h3>อยู่ปีการศึกษา : </h3><h3>เบอร์โทรศัพท์ : </h3><br><h3>ชนิดกิจกรรม : </h3><h3>วันเริ่ม-จบกิจกรรม : </h3><h3>สถานที่ทำกิจกรรม : </h3><h3>รายละเอียดกิจกรรมเพิ่มเติม : </h3></td></tr></div></table>');
+  
+//       document.getElementById("ActNext").insertAdjacentHTML("afterend",
+// '<table><div><tr id="style2"><td colspan="3"><h2>Activity n : งาน123456789</h2></tr><tr id="style2"><td><h3>ภาพกิจกรรม</h3><img src="" width="400vh" height="300vh" id="style3" /></td><td width="600vh"><h2>ชื่อคนที่ทำกิจกรรม : </h2><h3>รหัสนักศึกษา : </h3><h3>อีเมลล์ : </h3><h3>อยู่ปีการศึกษา : </h3><h3>เบอร์โทรศัพท์ : </h3><br><h3>ชนิดกิจกรรม : </h3><h3>วันเริ่ม-จบกิจกรรม : </h3><h3>สถานที่ทำกิจกรรม : </h3><h3>รายละเอียดกิจกรรมเพิ่มเติม : </h3></td></tr></div></table>');
+
 
   }
   else{
+
+    if (z==1){
+      document.getElementById("ActNext").insertAdjacentHTML("beforeend","<h1 id='font-noto1'>My Previous Activity</h1>");
+      
+    }
+
+    
+  //display picture
+
+  var b = document.getElementById("picturedata").textContent;
+
+          document.getElementById("ActNext").insertAdjacentHTML("afterend",
+ '<table><div><tr id="style2"><td colspan="3"><h2 id="font-noto1">Activity '+z+' : '+work.value+'</h2></tr><tr id="style2"><td id="font-noto2"><h3>ภาพกิจกรรม</h3><img src="'+b+'" width="400vh" height="300vh" id="style3" /></td><td width="600vh" id="font-kanit1"><h2>ชื่อคนที่ทำกิจกรรม : '+fullname.value+'</h2><h3>รหัสนักศึกษา : '+studentid.value+'</h3><h3>อีเมลล์ : '+email.value+'</h3><h3>อยู่ปีการศึกษา : '+semes+'/'+ayear+'</h3><h3>เบอร์โทรศัพท์ : '+phone.value+'</h3><br><h3>ชนิดกิจกรรม : '+worktype+'</h3><h3>วันเริ่ม-จบกิจกรรม : '+startdatetime.value+' - '+enddatetime.value+'</h3><h3>สถานที่ทำกิจกรรม : '+locate+'</h3><h3>รายละเอียดกิจกรรมเพิ่มเติม : '+description+'</h3></td></tr></div></table>');
+
+
+
+
+    //encodeImageFileAsURL();
   errorElement.textContent = "";
-//document.getElementById("addnexttext").insertAdjacentHTML("afterend","<tr><td>"+a+"</td><td>"+fullname.value+"</td><td>"+studentid.value+"</td><td>"+work.value+" - TypeOfWork</td><td>Semester/A.year</td><td>Places</td></tr>");
-document.getElementById("ActNext").insertAdjacentHTML("afterend",
-'<div><tr><td colspan="2"><h2>Activity'+z+' : '+work.value+'</h2></td></tr><tr id="style2"><td><h3>ภาพกิจกรรม</h3><img src="" width="400vh" height="300vh" id="style3" /></td><td width="600vh"><h2>ชื่อคนที่ทำกิจกรรม : '+fullname.value+'</h2><h3>รหัสนักศึกษา : '+studentid.value+'</h3><h3>อีเมลล์ : '+email.value+'</h3><h3>อยู่ปีการศึกษา : '+semes+'/'+ayear+'</h3><h3>เบอร์โทรศัพท์ : '+phone.value+'</h3><br><h3>ชนิดกิจกรรม : '+worktype+'</h3><h3>วันเริ่ม-จบกิจกรรม : '+startdatetime.value+'-'+enddatetime.value+'</h3><h3>สถานที่ทำกิจกรรม : '+locate+'</h3><h3>รายละเอียดกิจกรรมเพิ่มเติม : '+description+'</h3></td></tr></div>' );
+  //document.getElementById("ActNext").insertAdjacentHTML("afterend","<tr><td>"+a+"</td><td>"+fullname.value+"</td><td>"+studentid.value+"</td><td>"+work.value+" - TypeOfWork</td><td>Semester/A.year</td><td>Places</td></tr>");
+ //<div><tr><td colspan="2"><h2>Activity'+z+' : </h2></td></tr><tr id="style2"><td><h3>ภาพกิจกรรม</h3><img src="" width="400vh" height="300vh" id="style3" /></td><td width="600vh"><h2>ชื่อคนที่ทำกิจกรรม : </h2><h3>รหัสนักศึกษา : </h3><h3>อีเมลล์ : </h3><h3>อยู่ปีการศึกษา : </h3><h3>เบอร์โทรศัพท์ : </h3><br><h3>ชนิดกิจกรรม : </h3><h3>วันเริ่ม-จบกิจกรรม : -</h3><h3>สถานที่ทำกิจกรรม : </h3><h3>รายละเอียดกิจกรรมเพิ่มเติม : </h3></td></tr></div>' 
 
 
 alert("บันทึกข้อมูลได้สำเร็จ");
 z++;
-
 
 //document.getElementById("myForm").reset();
 }
@@ -314,10 +335,12 @@ z++;
 
 
 
-//read image
-/*
+
+//preview
+
 var fileTag = document.getElementById("filetag"),
-    preview = document.getElementById("preview");
+    preview = document.getElementById("preview"),
+    picturedata = document.getElementById("picturedata");
     
 fileTag.addEventListener("change", function() {
   changeImage(this);
@@ -331,12 +354,14 @@ function changeImage(input) {
 
     reader.onload = function(e) {
       preview.setAttribute('src', e.target.result);
+      var b = e.target.result;
+      picturedata.textContent = b;
     }
 
     reader.readAsDataURL(input.files[0]);
   }
 }
-*/
+
 
 
 // Event listener for form submission
@@ -385,13 +410,14 @@ async function submitForm(event) {
     student_id: parseInt(formData.get("studentID")),
     email: formData.get("email"),
     title: formData.get("workTitle"),
-    type_of_work_id: parseInt(formData.get("activityType")),
+    type_of_work_id: formData.get("activityType"),
     academic_year: parseInt(formData.get("academicYear")) - 543,
     semester: parseInt(formData.get("semester")),
     start_date: formData.get("startDate"),
     end_date: formData.get("endDate"),
     location: formData.get("location"),
-    description: formData.get("description")
+    description: formData.get("description"),
+    pic_data: document.getElementById("picturedata").textContent
   };
 
   console.log(data);
@@ -406,6 +432,7 @@ async function submitForm(event) {
       body: JSON.stringify(data),
     });
 
+    //check if response to localhost is ok
     if (response.ok) {
       const responseData = await response.json();
       console.log("Form data submitted successfully!");
@@ -420,10 +447,10 @@ async function submitForm(event) {
 
       document.getElementById("myForm").reset();
     } else {
-      console.error("Failed to submit form data.");
+      console.error("No Response. Failed to submit form data.");
 
       // Display error message
-      alert("Failed to submit form data. Please try again.");
+      alert("No response to Localhost! Failed to submit form data. Please try again.");
     }
   } catch (error) {
     console.error("An error occurred while submitting form data:", error);

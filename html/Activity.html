@@ -6,12 +6,20 @@
   <title>Forms - CSTU Passport</title>
   <link rel="icon" type="image/jpg" href="../pic/icon2.0.jpg">
   <link rel="stylesheet" href="../css/styleform.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@200&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@600&display=swap" rel="stylesheet">
 </head>
 <body>
+
+
+
   <div class="backgroundmain">
     <div class="Title">
-    <h1>My Activity</h1>
-    <h3>โปรดกรอกกิจกรรมที่ได้ทำลงไปให้ครบถ้วนและถูกต้อง</h3>
+    <h1 id="font-noto1">My Activity</h1>
+    <h3 id="font-kanit1">โปรดกรอกกิจกรรมที่ได้ทำลงไปให้ครบถ้วนและถูกต้อง</h3>
     </div>
   <!-- Form Container -->
   <div class="form-container">
@@ -20,11 +28,11 @@
 
 
     <fieldset>
-    <legend>ข้อมูลส่วนตัวผู้กรอก</legend>
+    <legend id="font-noto2">ข้อมูลส่วนตัวผู้กรอก</legend>
     <br>
       <!-- Firstname and Lastname Field -->
       <div class="form-group">
-        <label for="fullname">ชื่อ-นามสกุล</label>
+        <label for="fullname" id="font-kanit1">ชื่อ-นามสกุล</label>
         <input type="text" id="fullname" name="fullname" />
         <small>โปรดใส่ชื่อ-นามสกุล ตามฟอร์แมต ชื่อจริงและนามสกุลโดยเว้นวรรค 1 ช่อง</small>
         <span id="fullnameError" class="error"></span>
@@ -32,7 +40,7 @@
       
       <!-- Student ID Field -->
       <div class="form-group">
-        <label for="studentID">รหัสนักศึกษา</label>
+        <label for="studentID" id="font-kanit1">รหัสนักศึกษา</label>
         <input type="text" id="studentID" name="studentID" />
         <small>โปรดใส่รหัสนักศึกษา 10 หลัก</small>
         <span id="studentIDError" class="error"></span>
@@ -40,35 +48,35 @@
       
       <!-- University Email Field -->
       <div class="form-group">
-        <label for="email">อีเมลนักศึกษา</label>
+        <label for="email" id="font-kanit1">อีเมลนักศึกษา</label>
         <input type="email" id="email" name="email" />
         <small>โปรดใส่อีเมลนักศึกษาของคุณ ที่ลงท้ายด้วย "@dome.tu.ac.th"</small>
         <span id="emailError" class="error"></span>
       </div>
 
       <div class="form-group">
-        <label for="studentID">เบอร์โทรศัพท์</label>
+        <label for="studentID" id="font-kanit1">เบอร์โทรศัพท์</label>
         <input type="text" id="phoneNum" name="phoneNum" />
         <small>โปรดใส่เบอร์โทรศัพท์ของคุณ</small>
         <span id="phoneError" class="error"></span>
       </div>
 
-    </fieldset>
+    </fieldset id="font-noto1">
     <br>
 
     <fieldset>
-      <legend>กิจกรรม</legend>
+      <legend id="font-noto2">กิจกรรม</legend>
       <br>
       <!-- Work/Activity Title Field -->
       <div class="form-group">
-        <label for="workTitle">กิจกรรม/งานที่ได้ทำ</label>
+        <label for="workTitle" id="font-kanit1">กิจกรรม/งานที่ได้ทำ</label>
         <input type="text" id="workTitle" name="workTitle" />
         <span id="workError" class="error"></span>
       </div>
 
       <!-- Type of Work/Activity Field -->
       <div class="form-group">
-        <label for="activityType">ชนิดของกิจกรรม/งาน</label>
+        <label for="activityType" id="font-kanit1">ชนิดของกิจกรรม/งาน</label>
         <select id="activityType" name="activityType">
           <option value="" disabled selected>โปรดเลือก</option>
           <option value="Course">เกี่ยวกับวิชา</option>
@@ -97,12 +105,12 @@
     </fieldset>
     <br>
 
-      <fieldset>
-        <legend>เวลากิจกรรม</legend>
+      <fieldset >
+        <legend id="font-noto2">เวลากิจกรรม</legend>
       <br>
       <!-- Academic Year Field -->
       <div class="form-group">
-        <label for="academicYear">ปีการศึกษา</label>
+        <label for="academicYear" id="font-kanit1">ปีการศึกษา</label>
         <select id="academicYear" name="academicYear">
           <option value="" disabled selected>โปรดเลือก</option>
           <option value="2561">2561</option>
@@ -121,7 +129,7 @@
 
       <!-- Semester Field -->
       <div class="form-group">
-        <label for="semester">เทอม/ภาคการศึกษา</label>
+        <label for="semester" id="font-kanit1">เทอม/ภาคการศึกษา</label>
         <select id="semester" name="semester">
           <option value="" disabled selected>โปรดเลือก</option>
           <option value="1">1</option>
@@ -135,13 +143,13 @@
 
       <fieldset>
       <div class="form-group">
-        <label for="startDate">วัน/เวลาที่เริ่มทำกิจกรรม</label>
+        <label for="startDate" id="font-kanit1">วัน/เวลาที่เริ่มทำกิจกรรม</label>
         <input type="datetime-local" id="startDate" name="startDate" />
       </div>
 
       <!-- End Date/Time Field -->
       <div class="form-group">
-        <label for="endDate">วัน/เวลาที่สิ้นสุดกิจกรรม</label>
+        <label for="endDate" id="font-kanit1">วัน/เวลาที่สิ้นสุดกิจกรรม</label>
         <input type="datetime-local" id="endDate" name="endDate" />
       </div>
       </fieldset>
@@ -151,27 +159,28 @@
 
       <!-- Location Field -->
       <div class="form-group">
-        <label for="location">บริเวณที่ทำกิจกรรม</label>
+        <label for="location" id="font-kanit1">บริเวณที่ทำกิจกรรม</label>
         <input type="text" id="location" name="location" />
         <span id="locationError" class="error"></span>
       </div>
 
       <!-- Description Field -->
       <div class="form-group">
-        <label for="description">บรรยายรายละเอียดเพิ่มเติม (ไม่บังคับ)</label>
+        <label for="description" id="font-kanit1">บรรยายรายละเอียดเพิ่มเติม (ไม่บังคับ)</label>
         <textarea id="description" name="description" rows="4"></textarea>
       </div>
 
-      <!--
+      
       <div class="form-group">
         <label for="description">อัพโหลดรูปกิจกรรม</label>
-        <input type="file" id="filetag" accept="image/jpeg, image/png, image/jpg">
+        <input type="file" id="filetag" accept="image/jpeg, image/png, image/jpg" onchange="encodeImageFileAsURL(this)">
         <img src="" width="300px" height="200px" id="preview">
-      </div> -->
+      </div> 
 
       <!-- Submit Button -->
-      <div class="form-group">
-        <input type="submit" value="Submit" onclick="displaydata()"/>
+      <div input class="form-group">
+
+        <input type="submit" id="font-noto2" value="ส่งข้อมูล" onclick="displaydata()"/>
         <span id="allError" class="error"></span>
       </div>
     </form>
@@ -180,8 +189,9 @@
 
   
 <div class="DisplayActivity">
+  <fieldset>
 
-  <h1>My Previous Activity</h1>
+  <!--<h1>My Previous Activity</h1>-->
   <table>
 
     <div id="ActNext">
@@ -211,12 +221,17 @@
     </div>
 
   </table>
+  </fieldset>
 </div>
 
 
 
+
 </div>
-<footer>Version 1.85</footer>
+
+
+<footer>Version 1.86</footer>
+<p id="picturedata"></p>
   <!-- JavaScript -->
   <script src="../js/scriptform.js"></script>
 </body>

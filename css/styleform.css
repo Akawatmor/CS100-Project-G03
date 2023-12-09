@@ -11,6 +11,19 @@ body {
   font-family: Arial, sans-serif;
 }
 
+#font-kanit1{
+  font-family: 'Kanit', sans-serif;
+}
+
+#font-noto1{
+  font-family: 'Noto Sans Thai', sans-serif;
+  font-size:50px;
+}
+
+#font-noto2{
+  font-family: 'Noto Sans Thai', sans-serif;
+}
+
 /* Styling for the form container */
 .form-container {
   max-width: 600px;
@@ -93,6 +106,7 @@ body {
 #style2{
   height: 2vh;
   background-color: bisque;
+
 }
 #style3{
   margin:10px;
@@ -112,4 +126,8 @@ body{
   padding-left:50px;
   padding-top:25px;
   font-size:larger;
+}
+
+#picturedata{
+  font-size:0.01vw;
 }
