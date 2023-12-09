@@ -76,7 +76,8 @@
         list-style: none;
     }
 
-    .nav_phone li a :hover {
+    .nav_phone li a{
+        color: aliceblue;
         text-decoration: none;
     }
 
